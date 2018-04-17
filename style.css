@@ -5,48 +5,31 @@ html, body {
 }
 
 body {
-    background-size: cover;
+	background-size: cover;
    	display: -ms-flexbox;
 	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
 	display: flex;
 	-ms-flex-pack: center;
 	-webkit-box-pack: center;
-	color: #fff;
+	-moz-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 	box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 }
 
 .container {
 	max-width: 90rem;
-	display: flex;
 }
 
 header {
 	font-size: 1.7rem;
-	padding-right: 4rem;
-}
-
-nav {
-	z-index: 200;
-}
-
-
-.collapse {
-	min-width: 2rem;
-}
-
-#navbarDropdown {
-	color: #B9B9B9;
-
 }
 
 main {
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
-}
-
-.enter {
-	align-self: center;
 }
 
 .content {
@@ -54,32 +37,35 @@ main {
 }
 
 h1 {
-	align-self: center;
 	text-align: center;
 	font-family: 'Bellefair', serif;
-	font-size: 8.5rem;
-    line-height: 1.6;
+	font-size: 8.8rem;
 	color: #F0DFCD;
-	text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+	text-shadow: 0 .5rem .4rem rgba(0, 0, 0, .5);
+	line-height: 1.6;
 }
 
-/*.btn {   may be good for the space it offers between the title and link*/
-	/*margin-top: 18px;*/
+.btnwrap {
+	text-align: center;
 }
 
 a, a:hover {
-    text-align: center;
+	text-align: center;
 	text-decoration: none;
 }
 
-.btn-lg-dark {
+button {
 	width: 150px;
+	box-shadow: 0 .5rem .4rem rgba(0, 0, 0, .5);
+}
+
+.btn {
 	justify-content: center;
+	color: #F0DFCD;
 }
 
 footer {
 	position: fixed;
-	bottom: 0;    
+	bottom: 0;
 	justify-content: flex-start;
 }
-

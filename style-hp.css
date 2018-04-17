@@ -1,65 +1,68 @@
-html {
-	font-size: 62.5%;	
-	color: #fff;
+html, body {
+	font-size: 62.5%;
+	height: auto;
 	box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-	height: 100%;
 }
 
 body {
-	background: #2E1912 url("background3-md.jpg") no-repeat fixed center;
-    background-size: cover;
-    display: -ms-flexbox;
+	background: #2E1912 url("background-mdh.jpg") no-repeat fixed center;
+	background-position: center;
+	background-size: cover;
+	display: -ms-flexbox;
 	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
 	display: flex;
 	-ms-flex-pack: center;
 	-webkit-box-pack: center;
+	-moz-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 	font-family: 'Bellefair', serif;
 }
 
 .container {
 	max-width: 97rem;
 	display: flex;
-	height: 100%;
-}
-
-header {
-	font-family: 'Bellefair', serif;
-/*	font-family: 'Rokkitt', sans-serif;
-	font-size: 2.2rem;
-	text-decoration: none;
-	color: #F0DFCD;*/
-	/*padding-right: 4rem;*/
+	height: auto;
+	background-color: rgba(20, 5, 0, 0.25);
+	background-size: cover;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .navbar {
-	padding: 0px 0px;
+	height: 15rem;
+	background: url("header.jpg") center;
+}
+
+.navbar-toggler {
+	height: 3rem;
+	width: 18rem;
+	background-color: black;
 }
 
 .collapse {
 	min-width: 2rem;
 }
 
-#navbarDropdown {
-	color: #B9B9B9;
-
+.navbar-nav {
+	font-size: 2.5rem;
 }
-
-/*.navbar-brand {
-	width: 50px;
-	height: 50px;
-	border-radius: 600px;
-}*/
 
 .nav-item {
 	padding: 0px 15px;
-	font-family: 'Rokkitt', sans-serif;
-	font-size: 2.2rem;
-	text-decoration: none;
-	color: #F0DFCD;
 }
 
-.dropdown-text {
-	font-size: 2rem;
+.waves-effect, a {
+	background-color: transparent;
+}
+
+.dropdown-menu {
+	width: 100%;
+}
+
+.dropdown-text > .dropdown-item{
+	font-size: 1.6rem !important;
 }
 
 main {
@@ -73,11 +76,7 @@ main {
 }
 
 .wrapper {
-	/*display: grid;
-	grid-template-columns: 75% 25%;
-	grid-gap: 3rem;*/
 	margin-top: 45px;
-	margin-right: 3rem;
 	box-sizing: border-box;
 }
 
@@ -85,6 +84,7 @@ main {
 	background-color: #FFFDFC;
 	border-radius: 5px;
 	padding: 35px 15px;
+
 }
 
 .container-slide {
@@ -93,13 +93,33 @@ main {
 	background-color: black;
 }
 
-.slide-im {
-	height:100%; 
-	width:100%;
+.carousel-indicators {
+	margin-left: 0px;
+	margin-right: 0px;
+	padding: 0 0;
+	right: 0;
+	left: 0;
+	width: 100%;
 }
 
-.col-sm {
-	margin-top: 45px;
+.slide-im {
+	height: 100%;
+	width: 100%;
+}
+
+form {
+	font-size: 1.3rem;
+	background-color: #FFFDFC;
+	border-radius: 5px;
+	padding: 1.5rem;
+	padding-top: 35px;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+	border: 1px solid #5A4F40 !important;
+	box-shadow: 0 0 3px #5A4F40 !important;
+	-moz-box-shadow: 0 0 3px #5A4F40 !important;
+	-webkit-box-shadow: 0 0 3px #5A4F40 !important;
 }
 
 .sign-title {
@@ -118,53 +138,9 @@ main {
 	border-radius: 2.5px;
 }
 
-form {
-	font-size: 1.3rem;
-	background-color: #FFFDFC;
-	border-radius: 5px;
-	padding: 1.5rem;
-	padding-top: 35px;
-}
-
 label {
 	font-size: 2.2rem;
 	font-weight: normal;
-}
-
-form-control {
-	border-color: transparent;
-}
-
-form-control:click {
-	border-color: transparent;
-	
-}
-
-#InputEmail1 {
-	width: 100%;
-	box-sizing: border-box;
-}
-
-#InputEmail1:selection {
-	color: #2E1912;
-	box-shadow: none;
-
-}
-
-.form-control {
-	box-sizing: border-box;
-}
-
-.form-control:focus {
-	outline: #2E1912;
-	box-shadow: none;
-}
-
-.form-group input:focus, .form-group textarea:focus {
-	border: 1px solid #5A4F40 !important;
-	box-shadow: 0 0 3px #5A4F40 !important;
-	-moz-box-shadow: 0 0 3px #5A4F40 !important;
-	-webkit-box-shadow: 0 0 3px #5A4F40 !important;
 }
 
 input:focus, textarea:focus, select:focus {
@@ -177,8 +153,12 @@ input[type="date"], input[type="datetime-local"], input[type="email"], input[typ
 	font-size: 1.4rem;
 }
 
-.form-check-label {
-	font-size: 1.3rem;
+/*.form-control, .form-control:click, .form-control:hover {
+	border-color: transparent;
+}*/
+
+#InputEmail1 {
+	box-sizing: border-box;
 }
 
 .form-check-label {
@@ -187,9 +167,50 @@ input[type="date"], input[type="datetime-local"], input[type="email"], input[typ
 	padding-top: .1rem;
 }
 
+button {
+	right: 5px;
+}
+
 .btn {
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 	text-transform: none;
+	border-color: #5A4F40;
+	background-color: #5A4F40;
+	width: 100%;
+	align-self: center;
+}
+
+.btn-primary {
+	margin-top: 10px;
+	right: .56rem !important;
+	width: 100%;
+	border-color: #2E1912;
+	background-color: #2E1912;
+	color: #F0DFCD;
+	font-size: 1.5rem;
+	position: relative;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+	background: #F0DFCD !important;
+	background-color: #F0DFCD !important;
+	color: #2E1912 !important;
+	border-color: #2E1912 !important; 
+}
+
+.button {
+	transition: .2s ease-out;
+	border-color: #2E1912;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.3) !important;
+	border-color: #5A4F40 !important;
+}
+
+#mc_embed_signup {
+	background:#fff;
+}
+
+#mc-embedded-subscribe {
+	width: 100%;
 }
 
 hr {
@@ -217,31 +238,20 @@ hr.style-eight:after {
 	background: white; 
 }
 
-#mc_embed_signup {
-	background:#fff;
-}
-
 #mce-EMAIL {
-
 	width: 100%;
 	margin: 0px 3px 15px 0px;
-	border-radius: 2px;
-	border-color:
+	border: none;
+	border-bottom: 1px solid #ccc;
     width: 100%;
     padding: .375rem .75rem;
-    font-size: 1rem;
+    font-size: 1.4rem;
     line-height: 1.5;
     color: #495057;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-}
-
-#mc-embedded-subscribe {
-	width: 100%;
 }
 
 .hor1 {
@@ -297,27 +307,9 @@ hr.style-eight:after {
 	border-color: #2E1912 !important; 
 }
 
-
-.btn-primary {
-	margin-top: 10px;
-	right: .56rem !important;
-	width: 100%;
-	border-color: #2E1912;
-	background-color: #2E1912;
-	color: #F0DFCD;
-	font-size: 1.5rem;
-	position: relative;
-}
-
-.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-	background: #F0DFCD !important;
-	background-color: #F0DFCD !important;
-	color: #2E1912 !important;
-	border-color: #2E1912 !important; 
-}
-
 footer {
 	position: fixed;
 	bottom: 0;    
 	justify-content: flex-start;
 }
+
